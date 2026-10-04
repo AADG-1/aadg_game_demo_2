@@ -1,0 +1,68 @@
+[gd_scene format=4 uid="uid://cd67u4uq6ybxi"]
+
+[ext_resource type="PackedScene" uid="uid://5rhrgp852h4d" path="res://Scripts/GameBasics.tscn" id="1_0srwa"]
+[ext_resource type="Texture2D" uid="uid://di61idjnext3h" path="res://assets/RoadTiles_Energized_1.png" id="2_v5uil"]
+[ext_resource type="Texture2D" uid="uid://bxd6phmvyrcec" path="res://assets/Sprite_Ulica_tiles_part4.png" id="3_5722l"]
+[ext_resource type="Script" uid="uid://0pp1gch1cii5" path="res://levels/progress_bar.gd" id="4_v5uil"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilhis"]
+texture = ExtResource("2_v5uil")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ep78u"]
+texture = ExtResource("3_5722l")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5y726"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_ilhis")
+sources/1 = SubResource("TileSetAtlasSource_ep78u")
+
+[node name="Level2" type="Node2D" unique_id=1398983849]
+
+[node name="GameBasics" parent="." unique_id=207913981 instance=ExtResource("1_0srwa")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1532912618]
+tile_map_data = PackedByteArray("AAAFAPv/AQABAAEAAAAGAPr/AQABAAEAAAAHAPn/AQABAAEAAAAIAPn/AQABAAEAAAAJAPr/AQABAAEAAAAJAPv/AQABAAEAAAAJAPz/AQABAAEAAAAIAP3/AQABAAEAAAAHAP7/AQABAAEAAAAGAP//AQABAAEAAAAFAAAAAQABAAEAAAAGAAAAAQABAAEAAAAHAAAAAQABAAEAAAAIAAAAAQABAAEAAAAJAAAAAQABAAEAAAA=")
+tile_set = SubResource("TileSet_5y726")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1946144342]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=379433099]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=599433355]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.1
+anchor_bottom = 0.1
+offset_right = 215.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control/VBoxContainer" unique_id=1629119146]
+layout_mode = 2
+max_value = 480.0
+script = ExtResource("4_v5uil")

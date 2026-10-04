@@ -1,0 +1,14 @@
+TileMapLayer
+Node2D
+Timer
+CollisionShape2D
+Sprite2D
+AudioStreamPlayer
+AnimatedSprite2D
+CharacterBody2D
+Label
+Area2D
+MarginContainer
+NinePatchRect
+TileMap
+StaticBody2D

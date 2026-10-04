@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b2cq3lgyu3i4u"]
+
+[ext_resource type="Texture2D" uid="uid://c25hhq4rudnki" path="res://assets/icon.svg" id="1_7iq8v"]
+[ext_resource type="Script" uid="uid://cp27j0fvip2db" path="res://npc's/npc_test.gd" id="1_lqww0"]
+[ext_resource type="PackedScene" uid="uid://h45b88cxh5n7" path="res://interaction/interaction area/interaction_area.tscn" id="4_xf1tv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_updvk"]
+radius = 44.011364
+
+[node name="NpcTest" type="Node2D" unique_id=103198410]
+script = ExtResource("1_lqww0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1726122659]
+scale = Vector2(0.2695312, 0.546875)
+texture = ExtResource("1_7iq8v")
+
+[node name="InteractionArea" parent="." unique_id=1642824565 instance=ExtResource("4_xf1tv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1940019480]
+shape = SubResource("CircleShape2D_updvk")
