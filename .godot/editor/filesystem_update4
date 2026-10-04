@@ -1,0 +1,6 @@
+res://levels/level_2.tscn
+res://levels/level_1.tscn
+res://levels/area_2d.gd
+res://levels/color_rect.gd
+res://Scripts/GameBasics.tscn
+res://levels/monologue_ui.gd

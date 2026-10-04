@@ -1,0 +1,13 @@
+res://interaction/interaction area/interaction_area.tscn::b29c66fa84fb26af9a9ae57ac29be9b1::1791098580::res://.godot/exported/133200997/export-4e4aa838bbe39491d2b35455a7591897-interaction_area.scn
+res://interaction/InteractionManager.tscn::f42d23ca8dce8e15e8b4c0a83b4172d7::1791098580::res://.godot/exported/133200997/export-f958aea498aa37fe00fe3af35a58dd38-InteractionManager.scn
+res://levels/level_1.tscn::5a8996aaf5ff11a2835af28cbab4ebcb::1791104654::res://.godot/exported/133200997/export-12535bc1b7f5d974130914d712c29d37-level_1.scn
+res://levels/level_2.tscn::921ffd9251d4872d7a64b1f2cdb953be::1791104655::res://.godot/exported/133200997/export-c54f4559c5b4f25cf8605c0540fcbd9b-level_2.scn
+res://levels/level_3.tscn::da62eb3a69a801c7d2b444ee60b13e32::1791098580::res://.godot/exported/133200997/export-3d738aaadeadb8d954981574c88bf6fc-level_3.scn
+res://npc's/NPC-test.tscn::2018362c6ec91121fdfe854d613902c1::1791098580::res://.godot/exported/133200997/export-05c692a90a45732576f597b6b5e0e11b-NPC-test.scn
+res://Scripts/GameBasics.tscn::69207890f87b7e2ae748f656fb2780e1::1791100421::res://.godot/exported/133200997/export-5fbad3e03141ef974930f3ab16c3e017-GameBasics.scn
+res://text box/text_box.tscn::48ce9a16fc08fb5b7f1f4f398f294703::1791098580::res://.godot/exported/133200997/export-b8cba6aaa2e6c31b81a7c56d6a592c08-text_box.scn
+res://city_lvl.tscn::16c5fff6cbea865714d01701cc4134d2::1791098580::res://.godot/exported/133200997/export-5fcabc167be10e06427d3a15f4fcef54-city_lvl.scn
+res://game_timer.tscn::35def7f0d4eede4fdb74843f8a5c2f05::1791098580::res://.godot/exported/133200997/export-215cbe6cc22ef8fcfd8994dad6e99eef-game_timer.scn
+res://level_1.tscn::1e5f2130dddc5050fff78981cbd57aeb::1791098580::res://.godot/exported/133200997/export-63309efd344a9c730c2375c6c1edaf63-level_1.scn
+res://progress_bar.tscn::c65959e4103771284bba731d9d1af658::1791098580::res://.godot/exported/133200997/export-34d7895b17ec39a3f4a421f8adc1170c-progress_bar.scn
+res://rat.tscn::adae46a8493b17e4dbc93ee4f14e7935::1791098580::res://.godot/exported/133200997/export-ddd8cde2f246096cfa3246bd36baaa9e-rat.scn

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bl28dw81w554v" path="res://assets/Room.png" id="1_g7cvb"]
 [ext_resource type="Script" uid="uid://dh0nl4kmf7v6r" path="res://levels/area_2d.gd" id="3_bt44k"]
 [ext_resource type="PackedScene" uid="uid://5rhrgp852h4d" path="res://Scripts/GameBasics.tscn" id="4_kes8i"]
+[ext_resource type="Script" uid="uid://dttil7qtrjmx0" path="res://levels/monologue_ui.gd" id="4_kx6l7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ti2fe"]
 texture = ExtResource("1_g7cvb")
@@ -213,8 +214,8 @@ texture = ExtResource("1_g7cvb")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ti2fe")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bj4t2"]
-radius = 50.24938
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv56c"]
+size = Vector2(18, 32)
 
 [node name="Node2D" type="Node2D" unique_id=43208165]
 
@@ -223,22 +224,48 @@ tile_map_data = PackedByteArray("AAD7//3/AAADAAEAAAD7//7/AAADAAIAAAD7////AAADAAM
 tile_set = SubResource("TileSet_bv56c")
 
 [node name="GameBasics" parent="." unique_id=207913981 instance=ExtResource("4_kes8i")]
-position = Vector2(-178, -8)
+position = Vector2(-137, -25)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1404595867]
+[node name="Door" type="Area2D" parent="." unique_id=1404595867 node_paths=PackedStringArray("screen_fader")]
 script = ExtResource("3_bt44k")
+next_level_path = "res://levels/level_2.tscn"
+screen_fader = NodePath("../CanvasLayer/ColorRect")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=869991612]
-position = Vector2(123, 50)
-shape = SubResource("CircleShape2D_bj4t2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=869991612]
+position = Vector2(122, 44)
+shape = SubResource("RectangleShape2D_bv56c")
 
-[node name="Label" type="Label" parent="." unique_id=492879372]
-offset_left = -92.0
-offset_top = 107.0
-offset_right = 178.0
-offset_bottom = 134.0
-text = "Press Enter to leave the apartment"
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=584266795]
 
-[connection signal="body_entered" from="Area2D" to="GameBasics" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1495565755]
+custom_minimum_size = Vector2(500000, 500000)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -249997.0
+offset_top = -249877.0
+offset_right = 248851.0
+offset_bottom = 249475.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="MonologueUI" type="CanvasLayer" parent="." unique_id=651145031]
+script = ExtResource("4_kx6l7")
+
+[node name="Panel" type="Panel" parent="MonologueUI" unique_id=1967070927]
+offset_left = 148.0
+offset_top = 84.0
+offset_right = 148.0
+offset_bottom = 84.0
+
+[node name="Label" type="Label" parent="MonologueUI/Panel" unique_id=1344331443]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 100.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[connection signal="body_entered" from="Door" to="GameBasics" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+[connection signal="body_exited" from="Door" to="Door" method="_on_body_exited"]
